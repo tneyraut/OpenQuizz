@@ -1,0 +1,6 @@
+// GAME_VIEW
+"GAME_VIEW_GAME_OVER" = "Game Over";
+"GAME_VIEW_LOADING" = "Loading...";
+"GAME_VIEW_NEW_GAME" = "New Game";
+"GAME_VIEW_CORRECT" = "Correct";
+"GAME_VIEW_WRONG" = "Wrong";

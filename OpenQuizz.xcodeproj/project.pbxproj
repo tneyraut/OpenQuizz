@@ -25,6 +25,8 @@
 		E8A7CC981FA790D3002E1529 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A7CC971FA790D3002E1529 /* QuestionManager.swift */; };
 		E8A7CC9A1FA791AD002E1529 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A7CC991FA791AD002E1529 /* Constants.swift */; };
 		E8A7CC9D1FA794F7002E1529 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A7CC9C1FA794F7002E1529 /* StringExtension.swift */; };
+		E8C720C01FA8ED3800366DD4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8C720BF1FA8ED3800366DD4 /* Localizable.strings */; };
+		E8C720C21FA8EF1600366DD4 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C720C11FA8EF1600366DD4 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		E8A7CC971FA790D3002E1529 /* QuestionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		E8A7CC991FA791AD002E1529 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E8A7CC9C1FA794F7002E1529 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		E8C720BF1FA8ED3800366DD4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		E8C720C11FA8EF1600366DD4 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +131,7 @@
 		E827CB6A1FA753FB00678123 /* OpenQuizz */ = {
 			isa = PBXGroup;
 			children = (
+				E8C720BE1FA8ED1200366DD4 /* Localizations */,
 				E8240CD81FA8A38D00A095A2 /* Controls */,
 				E8A7CC9B1FA794EA002E1529 /* Extensions */,
 				E8A7CC961FA790B6002E1529 /* Managers */,
@@ -210,8 +215,17 @@
 			isa = PBXGroup;
 			children = (
 				E8A7CC9C1FA794F7002E1529 /* StringExtension.swift */,
+				E8C720C11FA8EF1600366DD4 /* ViewExtension.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		E8C720BE1FA8ED1200366DD4 /* Localizations */ = {
+			isa = PBXGroup;
+			children = (
+				E8C720BF1FA8ED3800366DD4 /* Localizable.strings */,
+			);
+			name = Localizations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,6 +336,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8C720C01FA8ED3800366DD4 /* Localizable.strings in Resources */,
 				E827CB791FA753FB00678123 /* LaunchScreen.storyboard in Resources */,
 				E827CB761FA753FB00678123 /* Assets.xcassets in Resources */,
 				E827CB9F1FA755C500678123 /* Balham.otf in Resources */,
@@ -362,6 +377,7 @@
 				E8240CDE1FA8A71900A095A2 /* AppColors.swift in Sources */,
 				E827CBA41FA75D4100678123 /* GameModel.swift in Sources */,
 				E8A7CC9A1FA791AD002E1529 /* Constants.swift in Sources */,
+				E8C720C21FA8EF1600366DD4 /* ViewExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

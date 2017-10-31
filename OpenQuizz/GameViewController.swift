@@ -14,12 +14,18 @@ class GameViewController: UIViewController
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var newGameButton: UIButton!
     @IBOutlet weak var questionView: QuestionView!
+    @IBOutlet weak var wrongButton: UIButton!
+    @IBOutlet weak var correctButton: UIButton!
     
     private let game = GameModel()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        newGameButton.setTitle(NSLocalizedString("GAME_VIEW_NEW_GAME", comment: ""), for: .normal)
+        wrongButton.setTitle(NSLocalizedString("GAME_VIEW_WRONG", comment: ""), for: .normal)
+        correctButton.setTitle(NSLocalizedString("GAME_VIEW_CORRECT", comment: ""), for: .normal)
         
         activityIndicator.startAnimating()
         
@@ -45,7 +51,17 @@ class GameViewController: UIViewController
             transformQuestionViewWith(gesture: sender)
             break
         case .ended, .cancelled:
-            answerQuestion()
+            switch questionView.style
+            {
+                case .correct:
+                    answerQuestion(answer: true)
+                    break
+                case .incorrect:
+                    answerQuestion(answer: false)
+                    break
+                default:
+                    break
+            }
             break
         default:
             break
@@ -72,24 +88,16 @@ class GameViewController: UIViewController
         }
     }
     
-    private func answerQuestion()
+    private func answerQuestion(answer: Bool)
     {
-        switch questionView.style
-        {
-            case .correct:
-                game.answer(answer: true)
-            case .incorrect:
-                game.answer(answer: false)
-            case .standard:
-                break
-        }
+        game.answer(answer: answer)
         
         updateScore()
         
         let screenWidth = UIScreen.main.bounds.width
         
         var translationTransform: CGAffineTransform
-        if questionView.style == .correct
+        if answer
         {
             translationTransform = CGAffineTransform(translationX: screenWidth, y: 0)
         }
@@ -122,7 +130,7 @@ class GameViewController: UIViewController
         }
         else
         {
-            questionView.question = "Game Over"
+            questionView.question = NSLocalizedString("GAME_VIEW_GAME_OVER", comment: "")
         }
         
         UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: { self.questionView.transform = .identity }, completion: nil)
@@ -130,10 +138,32 @@ class GameViewController: UIViewController
     
     @objc private func questionsLoaded()
     {
-        activityIndicator.isHidden = true
-        newGameButton.isHidden = false
+        activityIndicator.setHiddenAnimated(hidden: true)
+        newGameButton.setHiddenAnimated(hidden: false)
         
         questionView.question = game.getCurrentQuestionTitle()
+    }
+    
+    @IBAction func wrongCommand()
+    {
+        if game.getState() == .over
+        {
+            return
+        }
+        questionView.style = .incorrect
+        
+        answerQuestion(answer: false)
+    }
+    
+    @IBAction func correctCommand()
+    {
+        if game.getState() == .over
+        {
+            return
+        }
+        questionView.style = .correct
+        
+        answerQuestion(answer: true)
     }
     
     @IBAction func newGameCommand()
@@ -143,10 +173,10 @@ class GameViewController: UIViewController
     
     private func startNewGame()
     {
-        newGameButton.isHidden = true
-        activityIndicator.isHidden = false
+        newGameButton.setHiddenAnimated(hidden: true)
+        activityIndicator.setHiddenAnimated(hidden: false)
         
-        questionView.question = "Loading..."
+        questionView.question = NSLocalizedString("GAME_VIEW_LOADING", comment: "")
         questionView.style = .standard
         
         game.newGame()
