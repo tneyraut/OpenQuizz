@@ -13,6 +13,20 @@ class QuestionView: UIView
     @IBOutlet private var questionLabel: UILabel!
     @IBOutlet private var icon: UIImageView!
     
+    override func layoutSubviews()
+    {
+        super.layoutSubviews()
+        
+        layer.borderWidth = 1
+        layer.cornerRadius = 25
+        layer.borderColor = AppColors.gray.cgColor
+        
+        layer.shadowOffset = CGSize(width: 0, height: 1)
+        layer.shadowColor = AppColors.darkBlue.cgColor
+        layer.shadowRadius = 8
+        layer.shadowOpacity = 0.8
+    }
+    
     var question = ""
     {
         didSet
