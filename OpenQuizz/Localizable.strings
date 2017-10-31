@@ -1,3 +1,7 @@
+// SHARE
+"SHARE_CANCEL" = "Cancel";
+"SHARE_SAVE" = "Save";
+
 // GAME_VIEW
 "GAME_VIEW_GAME_OVER" = "Game Over";
 "GAME_VIEW_LOADING" = "Loading...";

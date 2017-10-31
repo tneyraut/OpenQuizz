@@ -26,6 +26,8 @@
 		E8A7CC9A1FA791AD002E1529 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A7CC991FA791AD002E1529 /* Constants.swift */; };
 		E8A7CC9D1FA794F7002E1529 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A7CC9C1FA794F7002E1529 /* StringExtension.swift */; };
 		E8AF680D1FA8F7C8000A34C2 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8AF680C1FA8F7C8000A34C2 /* RoundedButton.swift */; };
+		E8B8D4DA1FA916B0006803CD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B8D4D91FA916B0006803CD /* SettingsViewController.swift */; };
+		E8B8D4DC1FA917A7006803CD /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B8D4DB1FA917A7006803CD /* ViewControllerExtension.swift */; };
 		E8C720C01FA8ED3800366DD4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8C720BF1FA8ED3800366DD4 /* Localizable.strings */; };
 		E8C720C21FA8EF1600366DD4 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C720C11FA8EF1600366DD4 /* ViewExtension.swift */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,8 @@
 		E8A7CC991FA791AD002E1529 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E8A7CC9C1FA794F7002E1529 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		E8AF680C1FA8F7C8000A34C2 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		E8B8D4D91FA916B0006803CD /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E8B8D4DB1FA917A7006803CD /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 		E8C720BF1FA8ED3800366DD4 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		E8C720C11FA8EF1600366DD4 /* ViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -193,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				E827CB6D1FA753FB00678123 /* GameViewController.swift */,
+				E8B8D4D91FA916B0006803CD /* SettingsViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -219,6 +224,7 @@
 			children = (
 				E8A7CC9C1FA794F7002E1529 /* StringExtension.swift */,
 				E8C720C11FA8EF1600366DD4 /* ViewExtension.swift */,
+				E8B8D4DB1FA917A7006803CD /* ViewControllerExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -372,10 +378,12 @@
 				E8240CDA1FA8A3B000A095A2 /* QuestionView.swift in Sources */,
 				E827CBA61FA75D4A00678123 /* Question.swift in Sources */,
 				E8A7CC981FA790D3002E1529 /* QuestionManager.swift in Sources */,
+				E8B8D4DC1FA917A7006803CD /* ViewControllerExtension.swift in Sources */,
 				E827CB6E1FA753FB00678123 /* GameViewController.swift in Sources */,
 				E827CB6C1FA753FB00678123 /* AppDelegate.swift in Sources */,
 				E827CB741FA753FB00678123 /* OpenQuizz.xcdatamodeld in Sources */,
 				E8A7CC9D1FA794F7002E1529 /* StringExtension.swift in Sources */,
+				E8B8D4DA1FA916B0006803CD /* SettingsViewController.swift in Sources */,
 				E8A7CC951FA78CB1002E1529 /* StateEnum.swift in Sources */,
 				E8240CDE1FA8A71900A095A2 /* AppColors.swift in Sources */,
 				E827CBA41FA75D4100678123 /* GameModel.swift in Sources */,

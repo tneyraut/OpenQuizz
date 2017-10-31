@@ -52,7 +52,11 @@ class GameViewController: UIViewController
     
     @objc private func goToSettingsCommand()
     {
+        let storyboard = UIStoryboard(name: Constants.mainStoryboardId, bundle: nil)
         
+        let settingsViewController = storyboard.instantiateViewController(withIdentifier: Constants.settingsViewControllerId)
+        
+        showModal(viewController: settingsViewController)
     }
     
     @objc private func dragQuestionView(_ sender: UIPanGestureRecognizer)

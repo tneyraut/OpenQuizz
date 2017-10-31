@@ -18,4 +18,5 @@ class Constants
     
     static let mainStoryboardId = "Main"
     static let gameViewControllerId = "GameViewController"
+    static let settingsViewControllerId = "SettingsViewController"
 }
