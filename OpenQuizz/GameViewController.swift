@@ -12,10 +12,10 @@ class GameViewController: UIViewController
 {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var newGameButton: UIButton!
+    @IBOutlet weak var newGameButton: RoundedButton!
     @IBOutlet weak var questionView: QuestionView!
-    @IBOutlet weak var wrongButton: UIButton!
-    @IBOutlet weak var correctButton: UIButton!
+    @IBOutlet weak var wrongButton: RoundedButton!
+    @IBOutlet weak var correctButton: RoundedButton!
     
     private let game = GameModel()
     
@@ -26,6 +26,10 @@ class GameViewController: UIViewController
         newGameButton.setTitle(NSLocalizedString("GAME_VIEW_NEW_GAME", comment: ""), for: .normal)
         wrongButton.setTitle(NSLocalizedString("GAME_VIEW_WRONG", comment: ""), for: .normal)
         correctButton.setTitle(NSLocalizedString("GAME_VIEW_CORRECT", comment: ""), for: .normal)
+        
+        newGameButton.layer.borderColor = AppColors.lightBlue.cgColor
+        wrongButton.layer.borderColor = AppColors.red.cgColor
+        correctButton.layer.borderColor = AppColors.green.cgColor
         
         activityIndicator.startAnimating()
         

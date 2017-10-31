@@ -66,7 +66,7 @@
                                                     <outlet property="questionLabel" destination="0qB-bj-LPU" id="kGg-C4-8IB"/>
                                                 </connections>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfw-Hm-Lfw">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfw-Hm-Lfw" customClass="RoundedButton" customModule="OpenQuizz" customModuleProvider="target">
                                                 <rect key="frame" x="31" y="326" width="132" height="50"/>
                                                 <color key="backgroundColor" red="0.89803922176361084" green="0.43137255311012268" blue="0.49803921580314636" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -80,7 +80,7 @@
                                                     <action selector="wrongCommand" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kww-dp-bwI"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ys-8X-kVn">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ys-8X-kVn" customClass="RoundedButton" customModule="OpenQuizz" customModuleProvider="target">
                                                 <rect key="frame" x="213" y="326" width="133" height="50"/>
                                                 <color key="backgroundColor" red="0.7450980544090271" green="0.92549020051956177" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -94,7 +94,7 @@
                                                     <action selector="correctCommand" destination="BYZ-38-t0r" eventType="touchUpInside" id="2ao-ul-3Yx"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1D-yf-8CD">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1D-yf-8CD" customClass="RoundedButton" customModule="OpenQuizz" customModuleProvider="target">
                                                 <rect key="frame" x="88" y="546" width="200" height="50"/>
                                                 <color key="backgroundColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
