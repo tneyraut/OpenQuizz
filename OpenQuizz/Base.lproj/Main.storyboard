@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,7 +17,7 @@
         <!--Game View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="GameViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="GameViewController" id="BYZ-38-t0r" customClass="GameViewController" customModule="OpenQuizz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -67,7 +67,7 @@
                                                 </connections>
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yfw-Hm-Lfw" customClass="RoundedButton" customModule="OpenQuizz" customModuleProvider="target">
-                                                <rect key="frame" x="31" y="326" width="132" height="50"/>
+                                                <rect key="frame" x="31" y="306" width="132" height="50"/>
                                                 <color key="backgroundColor" red="0.89803922176361084" green="0.43137255311012268" blue="0.49803921580314636" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="UOT-Q3-PtQ"/>
@@ -81,7 +81,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1ys-8X-kVn" customClass="RoundedButton" customModule="OpenQuizz" customModuleProvider="target">
-                                                <rect key="frame" x="213" y="326" width="133" height="50"/>
+                                                <rect key="frame" x="213" y="306" width="133" height="50"/>
                                                 <color key="backgroundColor" red="0.7450980544090271" green="0.92549020051956177" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="tlH-js-VRg"/>
@@ -95,7 +95,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1D-yf-8CD" customClass="RoundedButton" customModule="OpenQuizz" customModuleProvider="target">
-                                                <rect key="frame" x="88" y="546" width="200" height="50"/>
+                                                <rect key="frame" x="88" y="466" width="200" height="50"/>
                                                 <color key="backgroundColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="200" id="sgA-8D-ABj"/>
@@ -110,10 +110,10 @@
                                                 </connections>
                                             </button>
                                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="FT8-Yo-w4M">
-                                                <rect key="frame" x="169" y="552" width="37" height="37"/>
+                                                <rect key="frame" x="169" y="472" width="37" height="37"/>
                                             </activityIndicatorView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K4-9K-zmI">
-                                                <rect key="frame" x="31" y="436" width="315" height="50"/>
+                                                <rect key="frame" x="31" y="386" width="315" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Bfa-Px-Gbv"/>
                                                 </constraints>
@@ -124,12 +124,12 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="FT8-Yo-w4M" firstAttribute="centerY" secondItem="B1D-yf-8CD" secondAttribute="centerY" id="FHc-oo-ptM"/>
-                                            <constraint firstItem="1ys-8X-kVn" firstAttribute="top" secondItem="MuI-32-rD4" secondAttribute="bottom" constant="50" id="Gcj-Ro-n1j"/>
+                                            <constraint firstItem="1ys-8X-kVn" firstAttribute="top" secondItem="MuI-32-rD4" secondAttribute="bottom" constant="30" id="Gcj-Ro-n1j"/>
                                             <constraint firstItem="FT8-Yo-w4M" firstAttribute="centerX" secondItem="B1D-yf-8CD" secondAttribute="centerX" id="HAo-R9-8cu"/>
                                             <constraint firstItem="MuI-32-rD4" firstAttribute="top" secondItem="D1P-et-UBj" secondAttribute="top" constant="30" id="HNy-mG-wEq"/>
-                                            <constraint firstItem="B1D-yf-8CD" firstAttribute="top" secondItem="6K4-9K-zmI" secondAttribute="bottom" constant="60" id="LPh-er-4uu"/>
+                                            <constraint firstItem="B1D-yf-8CD" firstAttribute="top" secondItem="6K4-9K-zmI" secondAttribute="bottom" constant="30" id="LPh-er-4uu"/>
                                             <constraint firstItem="1ys-8X-kVn" firstAttribute="leading" secondItem="Yfw-Hm-Lfw" secondAttribute="trailing" constant="50" id="QAd-HT-xky"/>
-                                            <constraint firstItem="6K4-9K-zmI" firstAttribute="top" secondItem="1ys-8X-kVn" secondAttribute="bottom" constant="60" id="RHK-h3-KMZ"/>
+                                            <constraint firstItem="6K4-9K-zmI" firstAttribute="top" secondItem="1ys-8X-kVn" secondAttribute="bottom" constant="30" id="RHK-h3-KMZ"/>
                                             <constraint firstItem="6K4-9K-zmI" firstAttribute="leading" secondItem="D1P-et-UBj" secondAttribute="leading" constant="30" id="RWO-pc-WfD"/>
                                             <constraint firstItem="Yfw-Hm-Lfw" firstAttribute="width" secondItem="1ys-8X-kVn" secondAttribute="width" id="Uyf-Og-0st"/>
                                             <constraint firstItem="MuI-32-rD4" firstAttribute="centerX" secondItem="D1P-et-UBj" secondAttribute="centerX" id="WTi-xn-dB9"/>
@@ -137,7 +137,7 @@
                                             <constraint firstItem="Yfw-Hm-Lfw" firstAttribute="leading" secondItem="D1P-et-UBj" secondAttribute="leading" constant="30" id="c8j-If-hol"/>
                                             <constraint firstAttribute="trailing" secondItem="1ys-8X-kVn" secondAttribute="trailing" constant="30" id="e1x-hg-elu"/>
                                             <constraint firstItem="MuI-32-rD4" firstAttribute="leading" secondItem="D1P-et-UBj" secondAttribute="leading" constant="30" id="jix-uD-41x"/>
-                                            <constraint firstItem="Yfw-Hm-Lfw" firstAttribute="top" secondItem="MuI-32-rD4" secondAttribute="bottom" constant="50" id="kfb-sd-caa"/>
+                                            <constraint firstItem="Yfw-Hm-Lfw" firstAttribute="top" secondItem="MuI-32-rD4" secondAttribute="bottom" constant="30" id="kfb-sd-caa"/>
                                             <constraint firstItem="B1D-yf-8CD" firstAttribute="centerX" secondItem="MuI-32-rD4" secondAttribute="centerX" id="sTA-GP-GSv"/>
                                         </constraints>
                                     </view>

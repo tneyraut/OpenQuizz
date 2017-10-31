@@ -15,4 +15,7 @@ class Constants
     static let baseUrl = "https://opentdb.com/api.php"
     
     static let questionsLoadedNotification = "questionsLoadedNotification"
+    
+    static let mainStoryboardId = "Main"
+    static let gameViewControllerId = "GameViewController"
 }

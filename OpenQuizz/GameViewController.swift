@@ -31,6 +31,14 @@ class GameViewController: UIViewController
         wrongButton.layer.borderColor = AppColors.red.cgColor
         correctButton.layer.borderColor = AppColors.green.cgColor
         
+        let settingsButton = UIButton(type: .custom)
+        settingsButton.setImage(#imageLiteral(resourceName: "settings"), for: .normal)
+        settingsButton.tintColor = AppColors.gray
+        settingsButton.addTarget(self, action: #selector(goToSettingsCommand), for: .touchUpInside)
+        settingsButton.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: settingsButton)
+        
         activityIndicator.startAnimating()
         
         NotificationCenter.default.addObserver(self, selector: #selector(questionsLoaded), name: NSNotification.Name(rawValue: Constants.questionsLoadedNotification), object: nil)
@@ -40,6 +48,11 @@ class GameViewController: UIViewController
         let panGestureRecognize = UIPanGestureRecognizer(target: self, action: #selector(dragQuestionView(_:)))
         
         questionView.addGestureRecognizer(panGestureRecognize)
+    }
+    
+    @objc private func goToSettingsCommand()
+    {
+        
     }
     
     @objc private func dragQuestionView(_ sender: UIPanGestureRecognizer)
