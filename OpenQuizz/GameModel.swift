@@ -43,8 +43,10 @@ class GameModel
         currentIndex = 0
         state = .over
         
+        let userDefaults = UserDefaults()
+        
         QuestionManager.singleton.getQuestions(
-            nbQuestions: Constants.nbQuestions,
+            nbQuestions: userDefaults.integer(forKey: Constants.nbQuestionsCacheKey),
             questionType: Constants.questionType,
             completionHandler:
             { (questions) in

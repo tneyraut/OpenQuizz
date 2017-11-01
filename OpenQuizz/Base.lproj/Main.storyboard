@@ -213,7 +213,7 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="8Ns-i6-Kpj">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="8Ns-i6-Kpj">
                                                 <rect key="frame" x="28" y="120" width="319" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
@@ -349,10 +349,26 @@
                             <constraint firstItem="JHv-IG-dh5" firstAttribute="width" secondItem="ZIa-AF-acf" secondAttribute="width" id="tH5-fw-AQW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lifeRecupModLabel" destination="Ypl-2e-aQq" id="pga-As-GCe"/>
+                        <outlet property="lifeRecupModSwitch" destination="Diq-hM-hLQ" id="Erg-AE-lt3"/>
+                        <outlet property="nbLifeRecupLabel" destination="VgI-Fs-OV6" id="dSD-fn-FId"/>
+                        <outlet property="nbLifeRecupSlider" destination="qoR-62-bz3" id="cRk-ju-4he"/>
+                        <outlet property="nbLifesLabel" destination="kSs-oT-PYO" id="YYn-wr-pit"/>
+                        <outlet property="nbLifesSlider" destination="7Qh-Iw-XB3" id="on9-F9-DoY"/>
+                        <outlet property="nbQuestionsLabel" destination="iAR-Vq-Deb" id="RJZ-hM-ntZ"/>
+                        <outlet property="nbQuestionsSlider" destination="8Ns-i6-Kpj" id="5Fm-7u-bWW"/>
+                        <outlet property="survivalModLabel" destination="R8M-RB-Fsm" id="0bj-xG-4s5"/>
+                        <outlet property="survivalModSwitch" destination="Bqq-h3-SuF" id="05g-Zm-qYU"/>
+                        <outlet property="timeLimitLabel" destination="1Ve-LW-Is7" id="39C-mj-xuL"/>
+                        <outlet property="timeLimitModLabel" destination="uEL-nv-qPw" id="fyc-wu-WnC"/>
+                        <outlet property="timeLimitModSwitch" destination="Gih-xq-hme" id="YPp-5V-vlt"/>
+                        <outlet property="timeLimitSlider" destination="OfV-kc-zCg" id="EHX-5g-zBn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9vC-0g-KYk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="801" y="70"/>
+            <point key="canvasLocation" x="873" y="99"/>
         </scene>
     </scenes>
     <resources>

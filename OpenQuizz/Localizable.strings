@@ -1,6 +1,8 @@
 // SHARE
 "SHARE_CANCEL" = "Cancel";
 "SHARE_SAVE" = "Save";
+"SHARE_YES" = "Yes";
+"SHARE_NO" = "No";
 
 // GAME_VIEW
 "GAME_VIEW_GAME_OVER" = "Game Over";
@@ -8,3 +10,16 @@
 "GAME_VIEW_NEW_GAME" = "New Game";
 "GAME_VIEW_CORRECT" = "Correct";
 "GAME_VIEW_WRONG" = "Wrong";
+"GAME_VIEW_TITLE" = "Open Quizz";
+
+// SETTINGS_VIEW
+"SETTINGS_VIEW_SURVIVAL_MOD" = "Survival mod :";
+"SETTINGS_VIEW_NB_QUESTIONS" = "Number of questions :";
+"SETTINGS_VIEW_NB_LIFE" = "Number of life :";
+"SETTINGS_VIEW_LIFE_RECUP_MOD" = "Life recuperation mod :";
+"SETTINGS_VIEW_GET_LIFE" = "Get one life foreach";
+"SETTINGS_VIEW_GOOD_ANSWERS" = "good answers";
+"SETTINGS_VIEW_TIME_LIMIT_MOD" = "Use time limit to answer :";
+"SETTINGS_VIEW_TIME_LIMIT" = "Time limit :";
+"SETTINGS_VIEW_SECOND" = "s";
+"SETTINGS_VIEW_TITLE" = "Settings";

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E81B51A81FA9F84F000EE5A8 /* SwitchExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81B51A71FA9F84F000EE5A8 /* SwitchExtension.swift */; };
 		E8240CDA1FA8A3B000A095A2 /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240CD91FA8A3B000A095A2 /* QuestionView.swift */; };
 		E8240CDC1FA8A5E600A095A2 /* StyleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240CDB1FA8A5E600A095A2 /* StyleEnum.swift */; };
 		E8240CDE1FA8A71900A095A2 /* AppColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8240CDD1FA8A71900A095A2 /* AppColors.swift */; };
@@ -50,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E81B51A71FA9F84F000EE5A8 /* SwitchExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwitchExtension.swift; sourceTree = "<group>"; };
 		E8240CD91FA8A3B000A095A2 /* QuestionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
 		E8240CDB1FA8A5E600A095A2 /* StyleEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StyleEnum.swift; sourceTree = "<group>"; };
 		E8240CDD1FA8A71900A095A2 /* AppColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppColors.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				E8A7CC9C1FA794F7002E1529 /* StringExtension.swift */,
 				E8C720C11FA8EF1600366DD4 /* ViewExtension.swift */,
 				E8B8D4DB1FA917A7006803CD /* ViewControllerExtension.swift */,
+				E81B51A71FA9F84F000EE5A8 /* SwitchExtension.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E81B51A81FA9F84F000EE5A8 /* SwitchExtension.swift in Sources */,
 				E8240CDC1FA8A5E600A095A2 /* StyleEnum.swift in Sources */,
 				E8240CDA1FA8A3B000A095A2 /* QuestionView.swift in Sources */,
 				E827CBA61FA75D4A00678123 /* Question.swift in Sources */,

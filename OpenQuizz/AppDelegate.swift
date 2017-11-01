@@ -17,6 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        let userDefaults = UserDefaults()
+        
+        let hasBeenAlreadyLaunched = userDefaults.bool(forKey: Constants.hasBeenAlreadyLaunchedCacheKey)
+        
+        if !hasBeenAlreadyLaunched
+        {
+            userDefaults.set(Constants.nbQuestionsInit, forKey: Constants.nbQuestionsCacheKey)
+            userDefaults.set(Constants.nbLifeInit, forKey: Constants.nbLifeCacheKey)
+            userDefaults.set(Constants.nbGoodAnswerInit, forKey: Constants.nbLifeRecupCacheKey)
+            userDefaults.set(Constants.nbTimeLimitInit, forKey: Constants.timeLimitCacheKey)
+            
+            userDefaults.set(Constants.survivalModInit, forKey: Constants.survivalModCacheKey)
+            userDefaults.set(Constants.lifeRecupModInit, forKey: Constants.lifeRecupModCacheKey)
+            userDefaults.set(Constants.timeLimitModInit, forKey: Constants.timeLimitModCacheKey)
+            
+            userDefaults.set(true, forKey: Constants.hasBeenAlreadyLaunchedCacheKey)
+            
+            userDefaults.synchronize()
+        }
+        
         let storyboard = UIStoryboard(name: Constants.mainStoryboardId, bundle: nil)
         
         let gameViewController = storyboard.instantiateViewController(withIdentifier: Constants.gameViewControllerId)

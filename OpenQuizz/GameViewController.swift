@@ -17,11 +17,15 @@ class GameViewController: UIViewController
     @IBOutlet weak var wrongButton: RoundedButton!
     @IBOutlet weak var correctButton: RoundedButton!
     
+    private let userDefaults = UserDefaults()
+    
     private let game = GameModel()
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        title = NSLocalizedString("GAME_VIEW_TITLE", comment: "")
         
         newGameButton.setTitle(NSLocalizedString("GAME_VIEW_NEW_GAME", comment: ""), for: .normal)
         wrongButton.setTitle(NSLocalizedString("GAME_VIEW_WRONG", comment: ""), for: .normal)
@@ -207,7 +211,7 @@ class GameViewController: UIViewController
     
     private func updateScore()
     {
-        scoreLabel.text = "\(game.getScore()) / \(Constants.nbQuestions)"
+        scoreLabel.text = "\(game.getScore()) / \(userDefaults.integer(forKey: Constants.nbQuestionsCacheKey))"
     }
 }
 
