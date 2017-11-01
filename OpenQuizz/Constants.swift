@@ -34,6 +34,7 @@ class Constants
     static let nbTimeLimitMax: Float = 60
     
     static let questionsLoadedNotification = "questionsLoadedNotification"
+    static let settingsSavedNotification = "settingsSavedNotification"
     
     // Storyboard and ViewController Id
     static let mainStoryboardId = "Main"

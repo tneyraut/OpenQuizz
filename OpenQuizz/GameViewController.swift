@@ -47,11 +47,20 @@ class GameViewController: UIViewController
         
         NotificationCenter.default.addObserver(self, selector: #selector(questionsLoaded), name: NSNotification.Name(rawValue: Constants.questionsLoadedNotification), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: #selector(settingsSaved), name: NSNotification.Name(rawValue: Constants.settingsSavedNotification), object: nil)
+        
         startNewGame()
         
         let panGestureRecognize = UIPanGestureRecognizer(target: self, action: #selector(dragQuestionView(_:)))
         
         questionView.addGestureRecognizer(panGestureRecognize)
+    }
+    
+    @objc private func settingsSaved()
+    {
+        // TODO prendre en considération les nouveaux paramètres....
+        
+        startNewGame()
     }
     
     @objc private func goToSettingsCommand()

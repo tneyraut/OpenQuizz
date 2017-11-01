@@ -38,6 +38,30 @@ class SettingsViewController: UIViewController
         super.viewDidLoad()
         
         initSwitchsAndSliders()
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            title: NSLocalizedString("SHARE_SAVE", comment: ""),
+            style: .done,
+            target: self,
+            action: #selector(saveCommand))
+    }
+    
+    @objc private func saveCommand()
+    {
+        userDefaults.set(survivalModSwitch.isOn, forKey: Constants.survivalModCacheKey)
+        userDefaults.set(lifeRecupModSwitch.isOn, forKey: Constants.lifeRecupModCacheKey)
+        userDefaults.set(timeLimitModSwitch.isOn, forKey: Constants.timeLimitModCacheKey)
+        
+        userDefaults.set(nbQuestionsSlider.value, forKey: Constants.nbQuestionsCacheKey)
+        userDefaults.set(nbLifesSlider.value, forKey: Constants.nbLifeCacheKey)
+        userDefaults.set(nbLifeRecupSlider.value, forKey: Constants.nbLifeRecupCacheKey)
+        userDefaults.set(timeLimitSlider.value, forKey: Constants.timeLimitCacheKey)
+        
+        userDefaults.synchronize()
+        
+        NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Constants.settingsSavedNotification)))
+        
+        closeModal()
     }
     
     private func initSwitchsAndSliders()
