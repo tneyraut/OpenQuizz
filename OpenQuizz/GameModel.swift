@@ -10,6 +10,8 @@ import UIKit
 
 class GameModel
 {
+    private let userDefaults = UserDefaults()
+    
     private var score = 0
     
     private var questions = [Question]()
@@ -40,13 +42,20 @@ class GameModel
     func newGame()
     {
         score = 0
-        currentIndex = 0
-        state = .over
         
-        let userDefaults = UserDefaults()
+        loadQuestions()
+    }
+    
+    private func loadQuestions()
+    {
+        state = .needMoreQuestions
+        
+        currentIndex = 0
+        
+        let nbQuestions = userDefaults.bool(forKey: Constants.survivalModCacheKey) ? 50 : userDefaults.integer(forKey: Constants.nbQuestionsCacheKey)
         
         QuestionManager.singleton.getQuestions(
-            nbQuestions: userDefaults.integer(forKey: Constants.nbQuestionsCacheKey),
+            nbQuestions: nbQuestions,
             questionType: Constants.questionType,
             completionHandler:
             { (questions) in
@@ -54,16 +63,20 @@ class GameModel
                 self.state = .ongoing
                 
                 NotificationCenter.default.post(Notification(name: Notification.Name(rawValue: Constants.questionsLoadedNotification)))
-            })
+        })
     }
     
-    func answer(answer: Bool)
+    func answer(answer: Bool) -> Bool
     {
-        if currentQuestion.answerIsCorrect(answer: answer)
+        let answerIsCorrect = currentQuestion.answerIsCorrect(answer: answer)
+        
+        if answerIsCorrect
         {
             score += 1
         }
         goToNextQuestion()
+        
+        return answerIsCorrect
     }
     
     func timeElapsed()
@@ -77,13 +90,17 @@ class GameModel
         {
             currentIndex += 1
         }
+        else if userDefaults.bool(forKey: Constants.survivalModCacheKey)
+        {
+            loadQuestions()
+        }
         else
         {
             finishGame()
         }
     }
     
-    private func finishGame()
+    func finishGame()
     {
         state = .over
     }

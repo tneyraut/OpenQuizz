@@ -24,6 +24,22 @@ class GameViewController: UIViewController
     
     private let game = GameModel()
     
+    private var nbAnswerCorrect = 0
+    
+    private var nbLife = 0
+    {
+        didSet
+        {
+            navigationItem.leftBarButtonItem = UIBarButtonItem(
+                title: "\(NSLocalizedString("GAME_VIEW_LIFE", comment: "")) \(nbLife)",
+                style: .done,
+                target: nil,
+                action: nil)
+        }
+    }
+    
+    // check timer il y a un petit problème dans le endless mode...
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -61,13 +77,13 @@ class GameViewController: UIViewController
     
     @objc private func settingsSaved()
     {
-        // TODO prendre en considération les nouveaux paramètres....
-        
         startNewGame()
     }
     
     @objc private func goToSettingsCommand()
     {
+        timer.invalidate()
+        
         let storyboard = UIStoryboard(name: Constants.mainStoryboardId, bundle: nil)
         
         let settingsViewController = storyboard.instantiateViewController(withIdentifier: Constants.settingsViewControllerId)
@@ -129,9 +145,16 @@ class GameViewController: UIViewController
     {
         timer.invalidate()
         
-        game.answer(answer: answer)
+        let answerIsCorrect = game.answer(answer: answer)
         
         updateScore()
+        
+        let canContinu = checkLifeCanContinu(answerIsCorrect: answerIsCorrect)
+        
+        if !canContinu
+        {
+            game.finishGame()
+        }
         
         let screenWidth = UIScreen.main.bounds.width
         
@@ -163,9 +186,15 @@ class GameViewController: UIViewController
         
         questionView.style = .standard
         
-        if game.getState() == .ongoing
+        let gameState = game.getState()
+        
+        if gameState == .ongoing
         {
             questionView.question = game.getCurrentQuestionTitle()
+        }
+        else if gameState == .needMoreQuestions
+        {
+            questionView.question = NSLocalizedString("GAME_VIEW_LOADING", comment: "")
         }
         else
         {
@@ -180,7 +209,7 @@ class GameViewController: UIViewController
             options: [],
             animations: { self.questionView.transform = .identity },
             completion: { (success) in
-                if self.game.getState() != .over
+                if gameState == .ongoing
                 {
                     self.launchTimer()
                 }
@@ -228,6 +257,9 @@ class GameViewController: UIViewController
     {
         timer.invalidate()
         
+        nbAnswerCorrect = 0
+        nbLife = userDefaults.integer(forKey: Constants.nbLifeCacheKey)
+        
         newGameButton.setHiddenAnimated(hidden: true)
         activityIndicator.setHiddenAnimated(hidden: false)
         
@@ -241,7 +273,7 @@ class GameViewController: UIViewController
     
     private func updateScore()
     {
-        scoreLabel.text = "\(game.getScore()) / \(userDefaults.integer(forKey: Constants.nbQuestionsCacheKey))"
+        scoreLabel.text = userDefaults.bool(forKey: Constants.survivalModCacheKey) ? "\(game.getScore()) \(NSLocalizedString("GAME_VIEW_CORRECT_ANSWERS", comment: ""))" : "\(game.getScore()) / \(userDefaults.integer(forKey: Constants.nbQuestionsCacheKey))"
     }
     
     private func launchTimer()
@@ -265,14 +297,42 @@ class GameViewController: UIViewController
         
         AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
         
+        let canContinu = checkLifeCanContinu(answerIsCorrect: false)
+        
+        if !canContinu
+        {
+            game.finishGame()
+        }
+        
         game.timeElapsed()
         
         showQuestionView()
-        
-        if game.getState() != .over
+    }
+    
+    private func checkLifeCanContinu(answerIsCorrect: Bool) -> Bool
+    {
+        if !userDefaults.bool(forKey: Constants.survivalModCacheKey)
         {
-            launchTimer()
+            return true
         }
+        
+        nbAnswerCorrect = answerIsCorrect ? nbAnswerCorrect + 1 : 0
+        
+        if !answerIsCorrect
+        {
+            nbLife -= 1
+            
+            AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        }
+        
+        if userDefaults.bool(forKey: Constants.lifeRecupModCacheKey) && nbAnswerCorrect == userDefaults.integer(forKey: Constants.nbLifeRecupCacheKey)
+        {
+            nbAnswerCorrect = 0
+            
+            nbLife += 1
+        }
+        
+        return nbLife > 0
     }
 }
 

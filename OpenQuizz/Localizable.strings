@@ -12,6 +12,9 @@
 "GAME_VIEW_CORRECT" = "Correct";
 "GAME_VIEW_WRONG" = "Wrong";
 "GAME_VIEW_TITLE" = "Open Quizz";
+"GAME_VIEW_CORRECT_ANSWERS" = "correct answers";
+"GAME_VIEW_LIFE" = "Life :";
+
 
 // SETTINGS_VIEW
 "SETTINGS_VIEW_SURVIVAL_MOD" = "Survival mod :";

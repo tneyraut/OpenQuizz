@@ -8,5 +8,5 @@
 
 enum State
 {
-    case ongoing, over
+    case ongoing, over, needMoreQuestions
 }
