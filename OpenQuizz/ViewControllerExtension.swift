@@ -18,6 +18,8 @@ extension UIViewController
         
         navigationController.navigationBar.tintColor = UIColor.white
         
+        navigationController.navigationBar.titleTextAttributes = NSDictionary(objects: [UIColor.white], forKeys: [NSForegroundColorAttributeName as NSCopying]) as? [String : AnyObject]
+        
         viewController.addCancelButton()
         
         present(navigationController, animated: true, completion: nil)
