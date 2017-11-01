@@ -66,6 +66,11 @@ class GameModel
         goToNextQuestion()
     }
     
+    func timeElapsed()
+    {
+        goToNextQuestion()
+    }
+    
     private func goToNextQuestion()
     {
         if currentIndex < questions.count - 1

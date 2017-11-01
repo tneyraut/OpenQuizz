@@ -161,6 +161,6 @@ class SettingsViewController: UIViewController
         
         timeLimitModLabel.text = "\(NSLocalizedString("SETTINGS_VIEW_TIME_LIMIT_MOD", comment: "")) \(timeLimitModSwitch.getStringValue())"
         
-        timeLimitLabel.text = "\(NSLocalizedString("SETTINGS_VIEW_TIME_LIMIT", comment: "")) \(Int(timeLimitSlider.value)) \(NSLocalizedString("SETTINGS_VIEW_SECOND", comment: ""))"
+        timeLimitLabel.text = "\(NSLocalizedString("SETTINGS_VIEW_TIME_LIMIT", comment: "")) \(Int(timeLimitSlider.value)) \(NSLocalizedString("SHARE_SECONDE", comment: ""))"
     }
 }

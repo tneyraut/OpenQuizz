@@ -33,10 +33,10 @@
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MuI-32-rD4" customClass="QuestionView" customModule="OpenQuizz" customModuleProvider="target">
-                                                <rect key="frame" x="30" y="30" width="315" height="245"/>
+                                                <rect key="frame" x="30" y="30" width="316" height="245"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qB-bj-LPU">
-                                                        <rect key="frame" x="20" y="58" width="275" height="130"/>
+                                                        <rect key="frame" x="20" y="58" width="276" height="130"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="130" id="mSQ-Pc-ZMK"/>
                                                         </constraints>
@@ -113,7 +113,7 @@
                                                 <rect key="frame" x="168.5" y="471" width="37" height="37"/>
                                             </activityIndicatorView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6K4-9K-zmI">
-                                                <rect key="frame" x="30" y="385" width="316" height="50"/>
+                                                <rect key="frame" x="30" y="385" width="315" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="Bfa-Px-Gbv"/>
                                                 </constraints>
@@ -124,7 +124,6 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="FT8-Yo-w4M" firstAttribute="centerY" secondItem="B1D-yf-8CD" secondAttribute="centerY" id="FHc-oo-ptM"/>
-                                            <constraint firstItem="1ys-8X-kVn" firstAttribute="top" secondItem="MuI-32-rD4" secondAttribute="bottom" constant="30" id="Gcj-Ro-n1j"/>
                                             <constraint firstItem="FT8-Yo-w4M" firstAttribute="centerX" secondItem="B1D-yf-8CD" secondAttribute="centerX" id="HAo-R9-8cu"/>
                                             <constraint firstItem="MuI-32-rD4" firstAttribute="top" secondItem="D1P-et-UBj" secondAttribute="top" constant="30" id="HNy-mG-wEq"/>
                                             <constraint firstItem="B1D-yf-8CD" firstAttribute="top" secondItem="6K4-9K-zmI" secondAttribute="bottom" constant="30" id="LPh-er-4uu"/>
@@ -136,9 +135,10 @@
                                             <constraint firstItem="6K4-9K-zmI" firstAttribute="centerX" secondItem="D1P-et-UBj" secondAttribute="centerX" id="bW7-iq-fqG"/>
                                             <constraint firstItem="Yfw-Hm-Lfw" firstAttribute="leading" secondItem="D1P-et-UBj" secondAttribute="leading" constant="30" id="c8j-If-hol"/>
                                             <constraint firstAttribute="trailing" secondItem="1ys-8X-kVn" secondAttribute="trailing" constant="30" id="e1x-hg-elu"/>
+                                            <constraint firstItem="Yfw-Hm-Lfw" firstAttribute="top" secondItem="MuI-32-rD4" secondAttribute="bottom" constant="30" id="et8-3f-ej5"/>
                                             <constraint firstItem="MuI-32-rD4" firstAttribute="leading" secondItem="D1P-et-UBj" secondAttribute="leading" constant="30" id="jix-uD-41x"/>
-                                            <constraint firstItem="Yfw-Hm-Lfw" firstAttribute="top" secondItem="MuI-32-rD4" secondAttribute="bottom" constant="30" id="kfb-sd-caa"/>
                                             <constraint firstItem="B1D-yf-8CD" firstAttribute="centerX" secondItem="MuI-32-rD4" secondAttribute="centerX" id="sTA-GP-GSv"/>
+                                            <constraint firstItem="1ys-8X-kVn" firstAttribute="centerY" secondItem="Yfw-Hm-Lfw" secondAttribute="centerY" id="zX2-sC-Vhj"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -205,7 +205,7 @@
                                                 <color key="onTintColor" red="0.7450980544090271" green="0.92549020051956177" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time limit : 10s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ve-LW-Is7">
-                                                <rect key="frame" x="60" y="74.5" width="285" height="40"/>
+                                                <rect key="frame" x="60" y="75" width="285" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="d8d-cM-25K"/>
                                                 </constraints>
@@ -214,12 +214,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-kc-zCg">
-                                                <rect key="frame" x="58" y="119.5" width="289" height="31"/>
+                                                <rect key="frame" x="58" y="120" width="289" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Survival mod : Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8M-RB-Fsm">
-                                                <rect key="frame" x="30" y="179.5" width="256" height="40"/>
+                                                <rect key="frame" x="30" y="180" width="256" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="XNz-gK-5NP"/>
                                                 </constraints>
@@ -228,11 +228,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-h3-SuF">
-                                                <rect key="frame" x="296" y="184" width="51" height="31"/>
+                                                <rect key="frame" x="296" y="185" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.7450980544090271" green="0.92549020051956177" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of questions : 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAR-Vq-Deb">
-                                                <rect key="frame" x="60" y="224.5" width="285" height="40"/>
+                                                <rect key="frame" x="60" y="225" width="285" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="TSg-Ec-Wub"/>
                                                 </constraints>
@@ -241,12 +241,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="8Ns-i6-Kpj">
-                                                <rect key="frame" x="58" y="269.5" width="289" height="31"/>
+                                                <rect key="frame" x="58" y="270" width="289" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of life : 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSs-oT-PYO">
-                                                <rect key="frame" x="60" y="224.5" width="285" height="40"/>
+                                                <rect key="frame" x="60" y="225" width="285" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="I7k-UW-mmp"/>
                                                 </constraints>
@@ -255,12 +255,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Qh-Iw-XB3">
-                                                <rect key="frame" x="58" y="269.5" width="289" height="31"/>
+                                                <rect key="frame" x="58" y="270" width="289" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life recuperation mod : Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ypl-2e-aQq">
-                                                <rect key="frame" x="30" y="329.5" width="256" height="40"/>
+                                                <rect key="frame" x="30" y="330" width="256" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="yd5-fi-d9h"/>
                                                 </constraints>
@@ -269,11 +269,11 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Diq-hM-hLQ">
-                                                <rect key="frame" x="296" y="334" width="51" height="31"/>
+                                                <rect key="frame" x="296" y="335" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.7450980544090271" green="0.92549020051956177" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get one life foreach 10 good answers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgI-Fs-OV6">
-                                                <rect key="frame" x="60" y="374.5" width="285" height="40"/>
+                                                <rect key="frame" x="60" y="375" width="285" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="tRy-JY-tBk"/>
                                                 </constraints>
@@ -282,7 +282,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qoR-62-bz3">
-                                                <rect key="frame" x="58" y="419.5" width="289" height="31"/>
+                                                <rect key="frame" x="58" y="420" width="289" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>

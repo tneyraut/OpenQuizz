@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AudioToolbox
 
 class GameViewController: UIViewController
 {
@@ -16,6 +17,8 @@ class GameViewController: UIViewController
     @IBOutlet weak var questionView: QuestionView!
     @IBOutlet weak var wrongButton: RoundedButton!
     @IBOutlet weak var correctButton: RoundedButton!
+    
+    private var timer = Timer()
     
     private let userDefaults = UserDefaults()
     
@@ -124,6 +127,8 @@ class GameViewController: UIViewController
     
     private func answerQuestion(answer: Bool)
     {
+        timer.invalidate()
+        
         game.answer(answer: answer)
         
         updateScore()
@@ -167,7 +172,19 @@ class GameViewController: UIViewController
             questionView.question = NSLocalizedString("GAME_VIEW_GAME_OVER", comment: "")
         }
         
-        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: [], animations: { self.questionView.transform = .identity }, completion: nil)
+        UIView.animate(
+            withDuration: 0.4,
+            delay: 0,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 0.5,
+            options: [],
+            animations: { self.questionView.transform = .identity },
+            completion: { (success) in
+                if self.game.getState() != .over
+                {
+                    self.launchTimer()
+                }
+            })
     }
     
     @objc private func questionsLoaded()
@@ -176,6 +193,8 @@ class GameViewController: UIViewController
         newGameButton.setHiddenAnimated(hidden: false)
         
         questionView.question = game.getCurrentQuestionTitle()
+        
+        launchTimer()
     }
     
     @IBAction func wrongCommand()
@@ -207,6 +226,8 @@ class GameViewController: UIViewController
     
     private func startNewGame()
     {
+        timer.invalidate()
+        
         newGameButton.setHiddenAnimated(hidden: true)
         activityIndicator.setHiddenAnimated(hidden: false)
         
@@ -221,6 +242,37 @@ class GameViewController: UIViewController
     private func updateScore()
     {
         scoreLabel.text = "\(game.getScore()) / \(userDefaults.integer(forKey: Constants.nbQuestionsCacheKey))"
+    }
+    
+    private func launchTimer()
+    {
+        if !userDefaults.bool(forKey: Constants.timeLimitModCacheKey)
+        {
+            return
+        }
+        
+        timer = Timer.scheduledTimer(
+            timeInterval: TimeInterval(userDefaults.integer(forKey: Constants.timeLimitCacheKey)),
+            target: self,
+            selector: #selector(timerCommand),
+            userInfo: nil,
+            repeats: true)
+    }
+    
+    @objc private func timerCommand()
+    {
+        timer.invalidate()
+        
+        AudioServicesPlayAlertSound(SystemSoundID(kSystemSoundID_Vibrate))
+        
+        game.timeElapsed()
+        
+        showQuestionView()
+        
+        if game.getState() != .over
+        {
+            launchTimer()
+        }
     }
 }
 
