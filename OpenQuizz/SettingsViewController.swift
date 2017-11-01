@@ -38,8 +38,6 @@ class SettingsViewController: UIViewController
         super.viewDidLoad()
         
         initSwitchsAndSliders()
-        
-        setLabelText()
     }
     
     private func initSwitchsAndSliders()
@@ -72,42 +70,50 @@ class SettingsViewController: UIViewController
         timeLimitSlider.minimumValue = Constants.nbTimeLimitMin
         timeLimitSlider.value = userDefaults.float(forKey: Constants.timeLimitCacheKey)
         timeLimitSlider.addTarget(self, action: #selector(sliderValueChange), for: .valueChanged)
+        
+        survivalModValueChange()
+        lifeRecupModValueChange()
+        timeLimitModValueChange()
     }
     
     @objc private func survivalModValueChange()
     {
         setLabelText()
         
-        if survivalModSwitch.isOn
-        {
-            
-            return
-        }
+        nbQuestionsSlider.setHiddenAnimated(hidden: survivalModSwitch.isOn)
+        nbQuestionsLabel.setHiddenAnimated(hidden: survivalModSwitch.isOn)
         
+        nbLifesLabel.setHiddenAnimated(hidden: !survivalModSwitch.isOn)
+        nbLifesSlider.setHiddenAnimated(hidden: !survivalModSwitch.isOn)
+        
+        lifeRecupModSwitch.setHiddenAnimated(hidden: !survivalModSwitch.isOn)
+        lifeRecupModLabel.setHiddenAnimated(hidden: !survivalModSwitch.isOn)
+        
+        if !survivalModSwitch.isOn
+        {
+            nbLifeRecupLabel.setHiddenAnimated(hidden: !survivalModSwitch.isOn)
+            nbLifeRecupSlider.setHiddenAnimated(hidden: !survivalModSwitch.isOn)
+        }
+        else
+        {
+            lifeRecupModValueChange()
+        }
     }
     
     @objc private func lifeRecupModValueChange()
     {
         setLabelText()
         
-        if lifeRecupModSwitch.isOn
-        {
-            
-            return
-        }
-        
+        nbLifeRecupLabel.setHiddenAnimated(hidden: !lifeRecupModSwitch.isOn)
+        nbLifeRecupSlider.setHiddenAnimated(hidden: !lifeRecupModSwitch.isOn)
     }
     
     @objc private func timeLimitModValueChange()
     {
         setLabelText()
         
-        if timeLimitModSwitch.isOn
-        {
-            
-            return
-        }
-        
+        timeLimitLabel.setHiddenAnimated(hidden: !timeLimitModSwitch.isOn)
+        timeLimitSlider.setHiddenAnimated(hidden: !timeLimitModSwitch.isOn)
     }
     
     @objc private func sliderValueChange()

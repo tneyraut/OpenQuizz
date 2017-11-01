@@ -191,76 +191,8 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zzt-Ze-Hz2">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Survival mod : Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8M-RB-Fsm">
-                                                <rect key="frame" x="30" y="30" width="256" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="XNz-gK-5NP"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-h3-SuF">
-                                                <rect key="frame" x="296" y="34.5" width="51" height="31"/>
-                                                <color key="onTintColor" red="0.7450980544090271" green="0.92549020051956177" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
-                                            </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of questions : 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAR-Vq-Deb">
-                                                <rect key="frame" x="30" y="75" width="315" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="TSg-Ec-Wub"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="8Ns-i6-Kpj">
-                                                <rect key="frame" x="28" y="120" width="319" height="31"/>
-                                                <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
-                                            </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of life : 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSs-oT-PYO">
-                                                <rect key="frame" x="30" y="160" width="315" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="I7k-UW-mmp"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Qh-Iw-XB3">
-                                                <rect key="frame" x="28" y="205" width="319" height="31"/>
-                                                <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
-                                            </slider>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life recuperation mod : Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ypl-2e-aQq">
-                                                <rect key="frame" x="30" y="265" width="256" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="yd5-fi-d9h"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Diq-hM-hLQ">
-                                                <rect key="frame" x="296" y="269.5" width="51" height="31"/>
-                                                <color key="onTintColor" red="0.7450980544090271" green="0.92549020051956177" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
-                                            </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get one life foreach 10 good answers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgI-Fs-OV6">
-                                                <rect key="frame" x="30" y="310" width="315" height="40"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="40" id="tRy-JY-tBk"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qoR-62-bz3">
-                                                <rect key="frame" x="28" y="355" width="319" height="31"/>
-                                                <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
-                                            </slider>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use time limit to answer : Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEL-nv-qPw">
-                                                <rect key="frame" x="30" y="415" width="256" height="40"/>
+                                                <rect key="frame" x="30" y="29.5" width="256" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="Url-kh-5Wk"/>
                                                 </constraints>
@@ -269,64 +201,132 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gih-xq-hme">
-                                                <rect key="frame" x="296" y="419" width="51" height="31"/>
+                                                <rect key="frame" x="296" y="33.5" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.7450980544090271" green="0.92549020051956177" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time limit : 10s" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ve-LW-Is7">
-                                                <rect key="frame" x="30" y="460" width="315" height="40"/>
+                                                <rect key="frame" x="60" y="74.5" width="285" height="40"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="40" id="d8d-cM-25K"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-kc-zCg">
+                                                <rect key="frame" x="58" y="119.5" width="289" height="31"/>
+                                                <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Survival mod : Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R8M-RB-Fsm">
+                                                <rect key="frame" x="30" y="179.5" width="256" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="XNz-gK-5NP"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="20"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OfV-kc-zCg">
-                                                <rect key="frame" x="28" y="505" width="319" height="31"/>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bqq-h3-SuF">
+                                                <rect key="frame" x="296" y="184" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.7450980544090271" green="0.92549020051956177" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of questions : 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAR-Vq-Deb">
+                                                <rect key="frame" x="60" y="224.5" width="285" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="TSg-Ec-Wub"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="8Ns-i6-Kpj">
+                                                <rect key="frame" x="58" y="269.5" width="289" height="31"/>
+                                                <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of life : 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kSs-oT-PYO">
+                                                <rect key="frame" x="60" y="224.5" width="285" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="I7k-UW-mmp"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="7Qh-Iw-XB3">
+                                                <rect key="frame" x="58" y="269.5" width="289" height="31"/>
+                                                <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
+                                            </slider>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Life recuperation mod : Yes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ypl-2e-aQq">
+                                                <rect key="frame" x="30" y="329.5" width="256" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="yd5-fi-d9h"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Diq-hM-hLQ">
+                                                <rect key="frame" x="296" y="334" width="51" height="31"/>
+                                                <color key="onTintColor" red="0.7450980544090271" green="0.92549020051956177" blue="0.56470590829849243" alpha="1" colorSpace="calibratedRGB"/>
+                                            </switch>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get one life foreach 10 good answers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VgI-Fs-OV6">
+                                                <rect key="frame" x="60" y="374.5" width="285" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="tRy-JY-tBk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Balham" family="Balham" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="qoR-62-bz3">
+                                                <rect key="frame" x="58" y="419.5" width="289" height="31"/>
                                                 <color key="minimumTrackTintColor" red="0.29803922772407532" green="0.47843137383460999" blue="0.73725491762161255" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="maximumTrackTintColor" red="0.69803923368453979" green="0.72156864404678345" blue="0.7450980544090271" alpha="1" colorSpace="calibratedRGB"/>
                                             </slider>
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="Diq-hM-hLQ" firstAttribute="centerY" secondItem="Ypl-2e-aQq" secondAttribute="centerY" id="0er-c1-7IP"/>
-                                            <constraint firstItem="qoR-62-bz3" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="2J2-Ue-Da4"/>
+                                            <constraint firstItem="qoR-62-bz3" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="60" id="2J2-Ue-Da4"/>
+                                            <constraint firstAttribute="trailing" secondItem="iAR-Vq-Deb" secondAttribute="trailing" constant="30" id="3JN-7B-Khr"/>
                                             <constraint firstItem="Ypl-2e-aQq" firstAttribute="top" secondItem="7Qh-Iw-XB3" secondAttribute="bottom" constant="30" id="5V5-z6-iLV"/>
-                                            <constraint firstItem="kSs-oT-PYO" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="6Fr-RZ-Wtp"/>
+                                            <constraint firstItem="kSs-oT-PYO" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="60" id="6Fr-RZ-Wtp"/>
+                                            <constraint firstAttribute="trailing" secondItem="kSs-oT-PYO" secondAttribute="trailing" constant="30" id="6Nx-fG-GTX"/>
                                             <constraint firstItem="7Qh-Iw-XB3" firstAttribute="top" secondItem="kSs-oT-PYO" secondAttribute="bottom" constant="5" id="6av-Oj-mOu"/>
-                                            <constraint firstItem="kSs-oT-PYO" firstAttribute="top" secondItem="8Ns-i6-Kpj" secondAttribute="bottom" constant="10" id="8Aa-91-kEZ"/>
-                                            <constraint firstItem="OfV-kc-zCg" firstAttribute="centerX" secondItem="Zzt-Ze-Hz2" secondAttribute="centerX" id="B3k-6L-2vC"/>
-                                            <constraint firstItem="8Ns-i6-Kpj" firstAttribute="centerX" secondItem="Zzt-Ze-Hz2" secondAttribute="centerX" id="Dem-h6-meu"/>
-                                            <constraint firstItem="qoR-62-bz3" firstAttribute="centerX" secondItem="Zzt-Ze-Hz2" secondAttribute="centerX" id="EIg-6p-5p8"/>
-                                            <constraint firstItem="1Ve-LW-Is7" firstAttribute="top" secondItem="uEL-nv-qPw" secondAttribute="bottom" constant="5" id="FMo-LW-HdJ"/>
-                                            <constraint firstItem="uEL-nv-qPw" firstAttribute="top" secondItem="qoR-62-bz3" secondAttribute="bottom" constant="30" id="GMq-ct-RwP"/>
+                                            <constraint firstAttribute="trailing" secondItem="1Ve-LW-Is7" secondAttribute="trailing" constant="30" id="8vy-Aw-OhT"/>
                                             <constraint firstAttribute="trailing" secondItem="Bqq-h3-SuF" secondAttribute="trailing" constant="30" id="K4b-an-68f"/>
-                                            <constraint firstItem="VgI-Fs-OV6" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="OAc-Jg-uQs"/>
+                                            <constraint firstAttribute="trailing" secondItem="8Ns-i6-Kpj" secondAttribute="trailing" constant="30" id="NLQ-fX-PjW"/>
+                                            <constraint firstItem="VgI-Fs-OV6" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="60" id="OAc-Jg-uQs"/>
                                             <constraint firstItem="Gih-xq-hme" firstAttribute="centerY" secondItem="uEL-nv-qPw" secondAttribute="centerY" id="QZq-o3-iai"/>
-                                            <constraint firstItem="iAR-Vq-Deb" firstAttribute="centerX" secondItem="Zzt-Ze-Hz2" secondAttribute="centerX" id="TKO-wZ-ZyG"/>
+                                            <constraint firstAttribute="trailing" secondItem="VgI-Fs-OV6" secondAttribute="trailing" constant="30" id="SRn-5V-yhp"/>
                                             <constraint firstItem="8Ns-i6-Kpj" firstAttribute="top" secondItem="iAR-Vq-Deb" secondAttribute="bottom" constant="5" id="TpZ-7t-Hdn"/>
-                                            <constraint firstItem="kSs-oT-PYO" firstAttribute="centerX" secondItem="Zzt-Ze-Hz2" secondAttribute="centerX" id="UCU-kl-vhj"/>
-                                            <constraint firstItem="OfV-kc-zCg" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="V2b-RJ-SAj"/>
-                                            <constraint firstItem="8Ns-i6-Kpj" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="Vtp-Rt-Xw5"/>
+                                            <constraint firstAttribute="trailing" secondItem="7Qh-Iw-XB3" secondAttribute="trailing" constant="30" id="UIA-yH-JP1"/>
+                                            <constraint firstItem="OfV-kc-zCg" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="60" id="V2b-RJ-SAj"/>
+                                            <constraint firstItem="8Ns-i6-Kpj" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="60" id="Vtp-Rt-Xw5"/>
+                                            <constraint firstItem="kSs-oT-PYO" firstAttribute="top" secondItem="R8M-RB-Fsm" secondAttribute="bottom" constant="5" id="YKB-o4-1SU"/>
+                                            <constraint firstAttribute="trailing" secondItem="qoR-62-bz3" secondAttribute="trailing" constant="30" id="YzZ-4u-cGa"/>
                                             <constraint firstItem="OfV-kc-zCg" firstAttribute="top" secondItem="1Ve-LW-Is7" secondAttribute="bottom" constant="5" id="ZgW-QG-cxX"/>
                                             <constraint firstAttribute="trailing" secondItem="Diq-hM-hLQ" secondAttribute="trailing" constant="30" id="aZQ-fY-2Zh"/>
                                             <constraint firstItem="qoR-62-bz3" firstAttribute="top" secondItem="VgI-Fs-OV6" secondAttribute="bottom" constant="5" id="bnR-EF-kN6"/>
-                                            <constraint firstItem="7Qh-Iw-XB3" firstAttribute="centerX" secondItem="Zzt-Ze-Hz2" secondAttribute="centerX" id="cHd-vI-vIT"/>
-                                            <constraint firstItem="7Qh-Iw-XB3" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="d5V-1G-JQJ"/>
+                                            <constraint firstItem="7Qh-Iw-XB3" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="60" id="d5V-1G-JQJ"/>
                                             <constraint firstItem="R8M-RB-Fsm" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="dGr-oo-mMH"/>
                                             <constraint firstItem="Bqq-h3-SuF" firstAttribute="leading" secondItem="R8M-RB-Fsm" secondAttribute="trailing" constant="10" id="eUI-GU-aqP"/>
-                                            <constraint firstItem="VgI-Fs-OV6" firstAttribute="centerX" secondItem="Zzt-Ze-Hz2" secondAttribute="centerX" id="h8b-KN-bqM"/>
-                                            <constraint firstItem="iAR-Vq-Deb" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="h9L-y6-1bv"/>
+                                            <constraint firstItem="iAR-Vq-Deb" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="60" id="h9L-y6-1bv"/>
+                                            <constraint firstItem="uEL-nv-qPw" firstAttribute="top" secondItem="Zzt-Ze-Hz2" secondAttribute="top" constant="30" id="iHE-rb-TLh"/>
                                             <constraint firstItem="iAR-Vq-Deb" firstAttribute="top" secondItem="R8M-RB-Fsm" secondAttribute="bottom" constant="5" id="kNG-sG-kSV"/>
-                                            <constraint firstItem="1Ve-LW-Is7" firstAttribute="centerX" secondItem="Zzt-Ze-Hz2" secondAttribute="centerX" id="kqI-w4-kdb"/>
-                                            <constraint firstItem="R8M-RB-Fsm" firstAttribute="top" secondItem="Zzt-Ze-Hz2" secondAttribute="top" constant="30" id="kwI-Mf-lAq"/>
                                             <constraint firstItem="Gih-xq-hme" firstAttribute="leading" secondItem="uEL-nv-qPw" secondAttribute="trailing" constant="10" id="mr8-tE-j3g"/>
-                                            <constraint firstItem="1Ve-LW-Is7" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="nQe-Sm-sOY"/>
+                                            <constraint firstItem="1Ve-LW-Is7" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="60" id="nQe-Sm-sOY"/>
                                             <constraint firstItem="uEL-nv-qPw" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="o5h-UR-NIa"/>
                                             <constraint firstItem="Bqq-h3-SuF" firstAttribute="centerY" secondItem="R8M-RB-Fsm" secondAttribute="centerY" id="paN-M0-DG6"/>
                                             <constraint firstAttribute="trailing" secondItem="Gih-xq-hme" secondAttribute="trailing" constant="30" id="qj1-6E-fxW"/>
                                             <constraint firstItem="VgI-Fs-OV6" firstAttribute="top" secondItem="Ypl-2e-aQq" secondAttribute="bottom" constant="5" id="tkd-h5-2Id"/>
+                                            <constraint firstItem="1Ve-LW-Is7" firstAttribute="top" secondItem="uEL-nv-qPw" secondAttribute="bottom" constant="5" id="uNn-UD-9F8"/>
                                             <constraint firstItem="Diq-hM-hLQ" firstAttribute="leading" secondItem="Ypl-2e-aQq" secondAttribute="trailing" constant="10" id="w7J-EV-GKe"/>
                                             <constraint firstItem="Ypl-2e-aQq" firstAttribute="leading" secondItem="Zzt-Ze-Hz2" secondAttribute="leading" constant="30" id="wVi-fK-GZG"/>
+                                            <constraint firstAttribute="trailing" secondItem="OfV-kc-zCg" secondAttribute="trailing" constant="30" id="y37-5A-Fts"/>
+                                            <constraint firstItem="R8M-RB-Fsm" firstAttribute="top" secondItem="OfV-kc-zCg" secondAttribute="bottom" constant="30" id="zfr-Dw-LBR"/>
                                         </constraints>
                                     </view>
                                 </subviews>
