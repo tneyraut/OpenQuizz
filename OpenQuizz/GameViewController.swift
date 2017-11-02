@@ -30,11 +30,18 @@ class GameViewController: UIViewController
     {
         didSet
         {
-            navigationItem.leftBarButtonItem = UIBarButtonItem(
-                title: "\(NSLocalizedString("GAME_VIEW_LIFE", comment: "")) \(nbLife)",
-                style: .done,
-                target: nil,
-                action: nil)
+            if userDefaults.bool(forKey: Constants.survivalModCacheKey)
+            {
+                navigationItem.leftBarButtonItem = UIBarButtonItem(
+                    title: "\(NSLocalizedString("GAME_VIEW_LIFE", comment: "")) \(nbLife)",
+                    style: .done,
+                    target: nil,
+                    action: nil)
+            }
+            else
+            {
+                navigationItem.leftBarButtonItem = nil
+            }
         }
     }
     
@@ -149,6 +156,15 @@ class GameViewController: UIViewController
         
         updateScore()
         
+        if answerIsCorrect
+        {
+            animateScoreLabel(color: AppColors.green)
+        }
+        else
+        {
+            animateScoreLabel(color: AppColors.red)
+        }
+        
         let canContinu = checkLifeCanContinu(answerIsCorrect: answerIsCorrect)
         
         if !canContinu
@@ -199,6 +215,10 @@ class GameViewController: UIViewController
         else
         {
             questionView.question = NSLocalizedString("GAME_VIEW_GAME_OVER", comment: "")
+            
+            UIView.animate(withDuration: 0.5, animations: { self.questionView.transform = CGAffineTransform(rotationAngle: CGFloat.pi) })
+            
+            UIView.animate(withDuration: 0.5, delay: 0.25, options: .curveEaseIn, animations: { self.questionView.transform = CGAffineTransform(rotationAngle: CGFloat.pi * 2.0) }, completion: nil)
         }
         
         UIView.animate(
@@ -333,6 +353,27 @@ class GameViewController: UIViewController
         }
         
         return nbLife > 0
+    }
+    
+    private func animateScoreLabel(color: UIColor)
+    {
+        UIView.animate(
+            withDuration: 0.3,
+            delay: 0,
+            usingSpringWithDamping: 0.5,
+            initialSpringVelocity: 0.5,
+            options: [],
+            animations:
+            {
+                self.scoreLabel.transform = CGAffineTransform(scaleX: 1.5, y: 1.5)
+                
+                self.scoreLabel.textColor = color
+            },
+            completion: { (success) in
+                self.scoreLabel.transform = .identity
+                
+                self.scoreLabel.textColor = AppColors.gray
+            })
     }
 }
 
